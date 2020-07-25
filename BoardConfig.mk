@@ -22,5 +22,10 @@ DEVICE_PATH := device/asus/X00R
 # Kernel
 TARGET_KERNEL_CONFIG := X00R_defconfig
 
+# Partitions
+BOARD_VENDORIMAGE_PARTITION_SIZE   := 681574400
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_VENDOR := vendor
+
 # Inherit the proprietary files
 -include vendor/asus/X00R/BoardConfigVendor.mk

@@ -19,6 +19,14 @@ DEVICE_PATH := device/asus/X00R
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/asus/X00R/X00R-vendor.mk)
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1440
+TARGET_SCREEN_WIDTH := 720
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay

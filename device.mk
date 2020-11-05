@@ -23,6 +23,10 @@ $(call inherit-product-if-exists, vendor/asus/X00R/X00R-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+
 # Sensors
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
